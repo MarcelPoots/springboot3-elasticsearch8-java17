@@ -27,6 +27,10 @@ public class UserController {
         repository.saveAll(users);
         System.err.println("Users saved");
 
+        User changedUser = new User(1l,"John2", "Smith2", "M");
+        repository.save(changedUser);
+        System.err.println("User changed");
+
     }
 
     @GetMapping("/users")
